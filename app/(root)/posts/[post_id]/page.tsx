@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PostCard from "@/components/card/post-card";
 import { getPostById } from "@/lib/query/posts/get-post-by-id";
 
+export const runtime = "edge";
+
 export async function generateMetadata({ params }: { params: { post_id: string } }) {
   const post = await getPostById(params.post_id);
   if (!post) return null;

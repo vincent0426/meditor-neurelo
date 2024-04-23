@@ -5,6 +5,8 @@ import Link from "next/link";
 import { UserAuthForm } from "@/components/form/user-auth-form";
 import NavbarLogo from "@/components/navbar-logo";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Login",
   description: "Sign in to your account",

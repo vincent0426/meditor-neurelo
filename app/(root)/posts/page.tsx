@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import PostList from "@/components/post-list";
 import { getAllPosts } from "@/lib/query/posts/get-all-posts";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Posts",
 };
