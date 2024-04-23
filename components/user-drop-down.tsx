@@ -42,7 +42,10 @@ export function UserDropDown({ user }: { user: Users }) {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem onClick={() => router.push("/posts")}>
+          <DropdownMenuItem onClick={() => {
+            router.push("/posts");
+            router.refresh();
+          }}>
             <User className="mr-2 size-4" />
             <span>My Posts</span>
             {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}

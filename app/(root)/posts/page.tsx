@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async() => {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts({ orderBy: { posted_at: "desc" } });
 
   return (
     <PostList posts={posts?.data ?? []} />
