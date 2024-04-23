@@ -40,7 +40,6 @@ const PublishPostButton = ({ user }: { user: Users }) => {
         loading: "Publishing your post...",
         success: (data: CreateOnePosts201Response | undefined) => {
           resetContent();
-          console.log("data", data);
           router.push(`/posts/${data?.data.post_id}`);
 
           return "Successfully published post, redirecting...";

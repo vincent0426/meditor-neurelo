@@ -9,11 +9,6 @@ interface CreatePostProps {
 }
 
 export const createPost = async ({ userId, content, title }: CreatePostProps) => {
-  console.log(userId, content);
-  console.log("Creating post");
-  console.log(process.env);
-  console.log("--------------------");
-
   try {
     const res = await PostsApiService.createOnePosts({
       title: title,

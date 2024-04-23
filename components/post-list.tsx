@@ -20,9 +20,7 @@ const PostList = ({ posts }: { posts: Posts[] }) => {
 export default PostList;
 
 const PostCard = ({ post }: { post: Posts }) => {
-  console.log(post);
   const firstParagraph = extractFirstParagraph(post.content!);
-  console.log(firstParagraph);
 
   return (
     <div>
