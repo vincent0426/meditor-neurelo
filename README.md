@@ -4,8 +4,8 @@
 
 <h1>Meditor</h1>
 
-This is a Medium-like editor built with [Tiptap](https://tiptap.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+This is a Full Stack Forum with a Medium-like, built with [neurelo](https://www.neurelo.com/) and [Tiptap](https://tiptap.dev/).
 
-You can try it out [here](https://meditor.pages.dev/).
+You can try it out [here](https://meditor-neurelo.vercel.app/).
 
 Please let me know if you have any suggestions or issues :)
