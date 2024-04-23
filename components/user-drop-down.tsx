@@ -55,7 +55,7 @@ export function UserDropDown({ user }: { user: Users }) {
             <span>Billing</span>
             {/* <DropdownMenuShortcut>⌘B</DropdownMenuShortcut> */}
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem disabled>
             <Settings className="mr-2 size-4" />
             <span>Settings</span>
             {/* <DropdownMenuShortcut>⌘S</DropdownMenuShortcut> */}
