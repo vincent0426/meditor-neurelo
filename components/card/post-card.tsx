@@ -17,7 +17,7 @@ const generateHTMLFromJSON = (json: any) =>
 
 const PostCard = ({ post }: { post: Posts }) => {
   return (
-    <div className="mx-auto mt-24 flex max-w-4xl flex-col px-16">
+    <div className="mx-auto my-24 flex max-w-4xl flex-col px-16">
       <div
         dangerouslySetInnerHTML={{
           __html: generateHTMLFromJSON(post.content),
