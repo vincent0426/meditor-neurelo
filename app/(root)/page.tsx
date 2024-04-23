@@ -5,8 +5,6 @@ import SubText from "@/components/subtext";
 import { Card } from "@/components/ui/card";
 import getCurrentUser from "@/lib/session";
 
-export const runtime = "edge";
-
 export default async function Page() {
   const user = await getCurrentUser();
 
