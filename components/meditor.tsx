@@ -20,11 +20,13 @@ import EditorFloatingMenu from "@/components/menu/editor-floating-menu";
 import lowlight from "@/lib/lowlight";
 import { useEditorStore } from "@/lib/store/editor";
 
+import { generateHTMLFromJSON } from "./card/post-card";
+
 const CustomDocument = Document.extend({
   content: "heading block*",
 });
 
-const Meditor = () => {
+const Meditor = ({ content }: {content?: string}) => {
   const [showLinkSelector, setShowLinkSelector] = useState(false);
   const [showBubbleMenu, setShowBubbleMenu] = useState(true);
   const [showFloatingMenu, setShowFloatingMenu] = useState(false);
@@ -113,6 +115,10 @@ const Meditor = () => {
     
     // focus the editor
     editor.commands.focus();
+    
+    if (content) {
+      editor.commands.setContent(generateHTMLFromJSON(content));
+    }
   }, [editor]);
   
   if(!editor) return null;

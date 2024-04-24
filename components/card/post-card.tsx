@@ -7,7 +7,7 @@ import { generateHTML } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Posts } from "neurelo-sdk";
 
-const generateHTMLFromJSON = (json: any) =>
+export const generateHTMLFromJSON = (json: any) =>
   generateHTML(JSON.parse(json), [
     StarterKit,
     Underline,
