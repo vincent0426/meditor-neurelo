@@ -29,10 +29,16 @@ const PublishPostButton = ({ user }: { user: Users }) => {
       return;
     }
     
+    if(!content!.content![0].content) {
+      toast.error("Post title is empty");
+
+      return;
+    }
+    
     // Content is an array, the first element is the title
     const newTitle = content!.content![0].content![0].text!;
     const newContent = JSON.stringify(content)!;
-
+    
     // const res = await createPost(user.user_id!, newContent);
     toast.promise(
       createPost({ title: newTitle, content: newContent, userId: user.user_id }),
