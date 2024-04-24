@@ -1,5 +1,6 @@
 import PublishPostButton from "@/components/button/publish-post-button";
 import Meditor from "@/components/meditor";
+import { Card } from "@/components/ui/card";
 import { getPostById } from "@/lib/query/posts/get-post-by-id";
 import getCurrentUser from "@/lib/session";
 
@@ -33,12 +34,13 @@ const Page = async ({ params: { post_id } }: { params: { post_id: string } }) =>
   }
   
   return (
-    <div className="mx-auto my-24 max-w-3xl">
-      <div className="flex justify-between">
-        <h1 className="mb-4 text-2xl font-bold">Edit Post</h1>
+    <div className="mx-auto my-24 max-w-3xl space-y-4">
+      <div className="flex justify-end">
         <PublishPostButton postId={post_id} user={user} />
       </div>
-      <Meditor content={post.data.content ?? ""} />
+      <Card className="min-h-[400px] w-full px-16 py-12">
+        <Meditor content={post.data.content ?? ""} />
+      </Card>
     </div>
   );
 };
