@@ -96,9 +96,11 @@ const PostControls = ({ post }: { post: Posts }) => {
           <DropdownMenuLabel>{post.title}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem onClick={() => router.push(`/posts/${post.post_id}/edit`)} className="hover:cursor-pointer">
-              <Pencil className="mr-2 size-4" />
-              <span>Edit</span>
+            <DropdownMenuItem>
+              <Link href={`/posts/${post.post_id}/edit`} className="flex">
+                <Pencil className="mr-2 size-4" />
+                <span>Edit</span>
+              </Link>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setIsDeleteDialogOpen(true)} className="hover:cursor-pointer">
               <Trash className="mr-2 size-4" />
