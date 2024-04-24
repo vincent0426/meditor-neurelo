@@ -23,7 +23,10 @@ export default async function Page() {
           </div>
         </h2>
         <div className="my-12 flex w-full flex-col space-y-4">
-          {user && (<PublishPostButton user={user} />)}
+          {user && (
+            <div className="self-end">
+              <PublishPostButton user={user} />
+            </div>)}
           <Card className="min-h-[400px] w-full px-16 py-12">
             <Meditor />
           </Card>

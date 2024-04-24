@@ -78,14 +78,14 @@ const PublishPostButton = ({ user, postId }: { user: Users, postId?: string }) =
   
   if(postId) {
     return (
-      <Button className="self-end font-mono" variant="secondary" onClick={() => publishPost(postId)}>
+      <Button className="font-mono" variant="secondary" onClick={() => publishPost(postId)}>
         Update Post
       </Button>
     );
   }
   
   return (
-    <Button className="self-end font-mono" variant="secondary" onClick={() => publishPost()}>
+    <Button className="font-mono" variant="secondary" onClick={() => publishPost()}>
       Publish Post
     </Button>
   );
