@@ -60,7 +60,7 @@ const PostCard = ({ post }: { post: Posts }) => {
               <PostControls post={post} />
             </div>
             <CardDescription className="max-h-6 overflow-hidden">
-              {firstParagraph && firstParagraph.content[0].text}
+              {firstParagraph && firstParagraph.content && firstParagraph.content[0].text}
             </CardDescription>
           </CardHeader>
           <CardFooter className="flex justify-between">
