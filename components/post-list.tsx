@@ -78,7 +78,6 @@ const PostCard = ({ post }: { post: Posts }) => {
 };
 
 const PostControls = ({ post }: { post: Posts }) => {
-  const router = useRouter();
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
 
   // Stop the click event from propagating to parent elements
@@ -96,12 +95,12 @@ const PostControls = ({ post }: { post: Posts }) => {
           <DropdownMenuLabel>{post.title}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <Link href={`/posts/${post.post_id}/edit`} className="flex">
+            <Link href={`/posts/${post.post_id}/edit`} className="w-full">
+              <DropdownMenuItem className="hover:cursor-pointer">
                 <Pencil className="mr-2 size-4" />
                 <span>Edit</span>
-              </Link>
-            </DropdownMenuItem>
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem onClick={() => setIsDeleteDialogOpen(true)} className="hover:cursor-pointer">
               <Trash className="mr-2 size-4" />
               <span>Delete</span>
